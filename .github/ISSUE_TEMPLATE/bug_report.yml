@@ -1,0 +1,60 @@
+name: "🐛 Błąd lub Problem"
+description: Zgłoś problem lub nieprawidłowe działanie aplikacji.
+title: "[BUG]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Dziękujemy za zgłoszenie! Wypełnij poniższe pola, aby pomóc nam jak najszybciej zdiagnozować i naprawić problem.
+
+  - type: input
+    id: user_id
+    attributes:
+      label: 4. ID / Nazwa użytkownika w systemie
+      description: Podaj swój login, e-mail lub ID konta w testowanej aplikacji.
+      placeholder: np. jan.kowalski@example.com lub ID: 1042
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: 1. Miejsce na stronie
+      description: Gdzie występuje problem? (np. adres URL, nazwa zakładki, widok, formularz)
+      placeholder: np. /dashboard/ustawienia -> zakładka Profil
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 2. Szczegółowy opis
+      description: Opisz dokładnie, co się stało oraz jakie było oczekiwane działanie.
+      placeholder: Po kliknięciu przycisku "Zapisz", strona przestała reagować i pojawił się błąd...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: reproducible
+    attributes:
+      label: 3a. Czy błąd da się powtórzyć (odtworzyć)?
+      options:
+        - "Tak – występuje za każdym razem"
+        - "Tak – występuje losowo / sporadycznie"
+        - "Nie – zdarzyło się tylko raz"
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction_steps
+    attributes:
+      label: 3b. Instrukcja reprodukcji (kroki do odtworzenia)
+      description: Jeśli odpowiedziałeś/aś "Tak", opisz krok po kroku jak wywołać ten błąd.
+      placeholder: |
+        1. Zaloguj się na konto.
+        2. Przejdź do zakładki X.
+        3. Wpisz w polu Y wartość Z.
+        4. Kliknij przycisk A.
+    validations:
+      required: false
