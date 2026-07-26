@@ -1,0 +1,36 @@
+name: "💡 Brakująca funkcjonalność"
+description: Propozycja nowej opcji, zmiany lub usprawnienia w aplikacji.
+title: "[FEATURE]: "
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Masz pomysł na usprawnienie aplikacji lub brakuje Ci jakiejś opcji? Podziel się z nami swoimi spostrzeżeniami!
+
+  - type: input
+    id: user_id
+    attributes:
+      label: 4. ID / Nazwa użytkownika w systemie
+      description: Podaj swój login, e-mail lub ID konta w testowanej aplikacji.
+      placeholder: np. jan.kowalski@example.com lub ID: 1042
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: 1. Miejsce na stronie
+      description: Do której części aplikacji odnosi się ten pomysł?
+      placeholder: np. Widok koszyka, Nawigacja główna, Generowanie raportów PDF
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 2. Szczegółowy opis
+      description: Opisz proponowaną funkcjonalność oraz problem, jaki ma rozwiązywać.
+      placeholder: Bardzo przydałaby się opcja eksportu wyników do pliku Excel, ponieważ obecnie...
+    validations:
+      required: true
